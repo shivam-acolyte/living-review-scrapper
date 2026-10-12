@@ -1,0 +1,102 @@
+# ==============================================================================
+# SECRETS & ENVIRONMENT
+# ==============================================================================
+.env
+.env.*
+!.env.example
+
+# ==============================================================================
+# DATABASES (local & seeded)
+# ==============================================================================
+*.db
+*.sqlite
+*.sqlite3
+seeded_properties.db
+property_pipeline.db
+
+# ==============================================================================
+# LARGE DATA FILES (CSVs, SQL dumps, JSON caches)
+# ==============================================================================
+# Raw / exported CSVs
+acolye_living_v2_public_houses_2.csv
+property_business_ids.csv
+property_reviews.csv
+target_property_reviews.csv
+reviews_batch_*.csv
+review_images.csv
+
+# SQL seed dumps
+property_reviews.sql
+seed_house_business_mappings.sql
+seed_house_reviews.sql
+target_property_reviews.sql
+reviews_batch_*.sql
+
+# JSON caches & progress tracking
+reviews_cache.json
+reviews_cache_done.json
+target_reviews_cache.json
+no_reviews.json
+image_done.json
+image_no_reviews.json
+target_done.json
+enrichment_cache.json
+
+# ==============================================================================
+# SCRAPED / DOWNLOADED IMAGES
+# ==============================================================================
+review_images_dl/
+debug_*.png
+step*.png
+page_*.png
+
+# ==============================================================================
+# PYTHON ARTIFACTS
+# ==============================================================================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+*.whl
+.venv/
+venv/
+env/
+.Python
+
+# ==============================================================================
+# BACKUP & TEMP FILES
+# ==============================================================================
+*.bak
+*.tmp
+*.swp
+*.swo
+*~
+.legacy_cache_migrated
+
+# ==============================================================================
+# GOOGLE MAPS SCRAPER (subproject — Go build artifacts)
+# ==============================================================================
+google-maps-scraper/local/
+google-maps-scraper/postgres/
+google-maps-scraper/*.exe
+google-maps-scraper/gmaps-scraper
+
+# ==============================================================================
+# PROPERTY GMAPS PIPELINE (subproject)
+# ==============================================================================
+property_gmaps_pipeline/__pycache__/
+property_gmaps_pipeline/*.db
+property_gmaps_pipeline/enrichment_cache.json
+
+# ==============================================================================
+# OS & EDITOR NOISE
+# ==============================================================================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.code-workspace
